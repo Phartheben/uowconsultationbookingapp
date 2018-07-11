@@ -1,0 +1,29 @@
+<ion-view title="Selfie Shots" id="page12">
+  <ion-content padding="true" style="background: url(img/1EWoHpyVREKCR1mNI5nz_Color20Burst202.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <h5 id="selfieShots-heading20" style="color:#F8EEEE;">Add a photo</h5>
+    <form id="selfieShots-form21" class="list">
+      <label class="item item-input" id="selfieShots-input32">
+        <span class="input-label">My name is</span>
+        <input type="text" placeholder="" ng-model="data.name">
+      </label>
+      <div class="spacer" style="width: 300px; height: 4px;"></div>
+      <label class="item item-input" id="selfieShots-input33">
+        <span class="input-label">My nickname is</span>
+        <input type="text" placeholder="" ng-model="data.nickname">
+      </label>
+      <div class="spacer" style="width: 300px; height: 4px;"></div>
+      <label class="item item-input" id="selfieShots-input34">
+        <span class="input-label">My favourite activity is</span>
+        <input type="text" placeholder="" ng-model="data.favact">
+      </label>
+      <div class="spacer" style="width: 300px; height: 4px;"></div>
+      <label class="item item-input" id="selfieShots-input35">
+        <span class="input-label">The weirdest thing I like to do is</span>
+        <input type="text" placeholder="" ng-model="data.weirdact">
+      </label>
+      <div class="spacer" style="width: 300px; height: 4px;"></div>
+      <ion-checkbox id="selfieShots-checkbox1">Authorize use of your photo on our public sites/pages</ion-checkbox>
+    </form>
+   <button id="selfieShots-button8" ng-click="doGetImage()" class="button button-positive button-block icon-left ion-camera">Pick or take a photo</button>
+  </ion-content>
+</ion-view>

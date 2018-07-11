@@ -1,0 +1,65 @@
+<ion-view title="Home" id="page1">
+  <ion-content padding="true" style="background: url(img/test.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <div>
+      <img src="img/seed.png" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div class="container">
+      
+      <div class="page-header text-center">  
+      <h5>Please be reminded that you can only book your consultation hours one week earlier. The date will be assigned automatically after your booking according to the day you booked. First come first serve basis. The last day of booking will be on Sunday 9p.m.<h5>
+        <h2>Consultation Hours</h2>        
+      </div>
+       <img src="img/const.jpg" style="display: block; width: 105%; height:50%; auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <!-- <li ng-repeat="attr in data">
+      <input type="radio" name='data-attr' value='{{attr.id}}' ng-model="selected.id" />{{attr.name}}
+    </li>
+  </ul>
+  
+  I NEED TO POPULATE THIS SELECT WITH "VALUES HASH" OF SELECTED RADIO ITEM
+  
+  <select ng-model="selected.value" ng-options="item.name for item in selectedAttr.values ">
+  </select> -->
+
+
+      <!-- were doing one day with 1 time slot for simplicity -->
+      <!-- we'll use angular's ng-repeat in a bit to get the other days and times -->
+      <!-- <div class="row seven-cols times">
+
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-3 text-center" ng-repeat="day in days">
+                  
+          <h2>{{day.name}}</h2>
+          
+          <div class="time-slot" ng-repeat="slot in day.slots">       
+            <input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked" ng-click="bookSlot($event)">
+
+            <label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
+              <span ng-if="slot.booked">Booked</span>
+              <span ng-if="!slot.booked">Available</span>
+            </label>
+
+          </div>
+        </div>    
+
+      </div>
+
+      <p class="text-center" style="margin-top: 50px;">    
+        <a href="#" class="btn btn-danger" ng-click="reset()">Reset</a>
+      </p>
+
+    </div>  -->
+    <div class="spacer" style="width: 300px; height: 6px;"></div>
+    <div id="home-button-bar2" class="button-bar"></div>
+    <div style="margin-right:-20px;">
+      <a href-inappbrowser="https://www.google.com/maps/place/INTI+International+College+Subang/@3.0741922,101.5887677,17z/data=!3m1!4b1!4m5!3m4!1s0x31cc4c5f8bdfaba7:0x31aac7ab1af0abc!8m2!3d3.0741922!4d101.5909564" id="home-button16" style="left:-10px;" class="button button-stable button-full icon-right ion-map">Directions</a>
+    </div>
+    <div style="margin-right:-20px;">
+      <a href="tel:03-5623 2800" id="home-button14" style="left:-10px;border-radius:-5px -5px -5px -5px;" class="button button-stable button-full icon-right ion-android-call">Call us</a>
+    </div>
+    <div style="margin-right:-20px;">
+      <a href="mailto:staffmail.uow.edu.au" id="home-button15" style="left:-10px;border-radius:0px 0px 0px 0px;" class="button button-stable button-full icon-right ion-android-chat">Message us</a>
+    </div>
+  </ion-content>
+</ion-view>

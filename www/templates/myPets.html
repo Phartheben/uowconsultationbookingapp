@@ -1,0 +1,47 @@
+<ion-view title="My Bookings" id="page2">
+    <ion-content padding="true" style="background: url(img/whiteclock.jpg) no-repeat center;background-size:cover;" class="has-header">
+        <div class="spacer" style="width: 300px; height: 21px;"></div>
+        <div>
+            <img src="img/seed.png" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <a ui-sref="menu.requestAnAppointment()" id="myPets-button19" class="button button-calm button-block icon-left ion-android-add">Make Appointment</a>
+        <ul class="testTable">
+            <div class="testHeader">
+                <li class="testRow">
+                    <span>Student Name</span>
+                    <span>Slot-Lecturer-Time</span>
+                    <span>Date</span>
+                    <span>Status</span>
+                    <span></span>
+                </li>
+            </div>
+        </ul>
+        <ul ng-repeat="app in appointments">
+            <div class="testBody">
+                <li class="testRow">
+                    <span>{{user_info.displayName}}</span>
+                    <span>{{app.id}} | {{app.name}}</span>
+                    <span>{{app.appdate}}</span>
+                    <span>{{app.addcomments}}</span>
+                    <span><button ng-confirm-click="Are you absolutely sure you want to cancel the booking?" ng-click="appointments.$remove(app)" class="button button-assertive button-block button-small icon ion-android-delete"> Cancel</button></span>
+                </li>
+            </div>
+        </ul>
+        <!-- <ul>
+            <li>Student Name</li>
+            <li>Slot-Lecturer</li>
+            <li>Date</li>
+            <li>Status</li>
+            <li></li>
+        </ul>
+        <ul ng-repeat="app in appointments">
+            <li>{{user_info.displayName}}</li>
+            <li>{{app.id}}</li>
+            <li>{{app.appdate}}</li>
+            <li>{{app.addcomments}}</li>
+            <button ng-click="appointments.$remove(app)">Cancel</button>
+        </ul> -->
+        <!-- <a ui-sref="menu.requestAnAppointment()" id="myPets-button19" class="button button-calm button-block icon-left ion-android-add">Make Appointment</a>
+ -->
+    </ion-content>
+</ion-view>

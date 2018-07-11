@@ -1,0 +1,36 @@
+<ion-view title="Request an Appointment" id="page10">
+    <ion-content padding="true" style="background: url(img/whiteclock.jpg) no-repeat center;background-size:cover;" class="has-header">
+        <form id="requestAnAppointment-form9" class="list">
+            <label class="item item-input" id="requestAnAppointment-input10">
+                <span class="input-label">Date: </span>
+                <input type="date" placeholder="will be assigned automatically" ng-model="selected.appdate">
+            </label>
+            <div class="spacer" style="width: 300px; height: 7px;"></div>
+            <span class="input-label">Select your lecturer below:</span>
+            <div ng-repeat="attr in data">
+                <input type="radio" name='data-attr' value='{{attr.id}}' ng-model="selected.id" />{{attr.name}}
+            </div>
+            </ul>
+            <!-- I NEED TO POPULATE THIS SELECT WITH "VALUES HASH" OF SELECTED RADIO ITEM -->
+            <span class="input-label">Slots available:</span>
+            <select ng-model="selected.value" ng-options="item.name for item in selectedAttr.values ">
+                <!-- <span ng-if="selected.value">Booked</span>
+                <span ng-if="!selected.value">Available</span> -->
+            </select>
+        </form>
+        <form id="requestAnAppointment-form12" class="list">
+            <label class="item item-input" id="requestAnAppointment-input11">
+                <span class="input-label">Name</span>
+                <h2>{{user_info.displayName}}</h2>
+            </label>
+            <div class="spacer" style="width: 300px; height: 5px;"></div>
+        </form>
+        <tr ng-repeat="app in appointments">
+            <td>{{app.id}}</td>
+            <td>{{app.apptime}}</td>
+            <td>{{app.addcomments}}</td>
+        </tr>
+        </form>
+        <button ng-click="add()" id="requestAnAppointment-button6" class="button button-stable button-block">Request Appointment</button>
+    </ion-content>
+</ion-view>
